@@ -5,10 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar Effect</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a data-page="home" href="#">HOME</a></li>
+                <li><a data-page="about" href="#">ABOUT</a></li>
+                <li><a data-page="services" href="#">SERVICES</a></li>
+                <li><a data-page="contact-us" href="#">CONTACT US</a></li>
+                <div class="nav-effect"></div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" data-index="0">
+            <h2>Home Page</h2>
+        </section>
+        <section class="about" data-index="1">
+            <h2>About Page</h2>
+        </section>
+        <section class="services" data-index="2">
+            <h2>Services</h2>
+        </section>
+        <section class="contact-us" data-index="3">
+            <h2>Contact Us Page</h2>
+        </section>
+    </main>
 
     <script src="./main.js"></script>
 </body>
