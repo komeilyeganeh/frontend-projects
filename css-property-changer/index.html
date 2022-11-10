@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Property Changer</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Shape Control -->
+    <div class="control">
+        <div class="control-item">
+            <h3>Position X</h3>
+            <div class="input-control">
+                <input type="range" min="0" max="1200" value="0" id="position-x">
+                <label>
+                    <span>0</span>
+                    <span>1200</span>
+                </label>
+            </div>
+        </div>
+        <div class="control-item">
+            <h3>Position Y</h3>
+            <div class="input-control">
+                <input type="range" min="0" max="250" value="0" id="position-y">
+                <label>
+                    <span>0</span>
+                    <span>500</span>
+                </label>
+            </div>
+        </div>
+        <div class="control-item">
+            <h3>Size</h3>
+            <div class="input-control">
+                <input type="range" min="0" max="2" step="0.1" id="size-control">
+                <label>
+                    <span>0</span>
+                    <span>2</span>
+                </label>
+            </div>
+        </div>
+        <div class="control-item">
+            <h3>Shape</h3>
+            <div class="input-control">
+                <select id="shape-select">
+                    <option value="1">Square</option>
+                    <option value="2">Circle</option>
+                </select>
+                <button class="ok-btn">OK</button>
+            </div>
+        </div>
+        <div class="control-item">
+            <h3>RGBA</h3>
+            <div class="input-control rgba-container">
+                <div class="range-color">
+                    <input type="range" min="0" max="255" value="0" id="range-r">
+                    <span>r</span>
+                </div>
+                <div class="range-color">
+                    <input type="range" min="0" max="255" value="0" id="range-g">
+                    <span>g</span>
+                </div>
+                <div class="range-color">
+                    <input type="range" min="0" max="255" value="0" id="range-b">
+                    <span>b</span>
+                </div>
+                <div class="range-color">
+                    <input type="range" min="0" max="1" step="0.01" value="1" id="range-a">
+                    <span>a</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shape -->
+    <div class="container">
+        <div class="shape"></div>
+    </div>
+
+    <p>Designed by : <a href="https://github.com/komeilyeganeh" target="_blank">Komeil Yeganeh</a></p>
+
+    <!-- script  -->
+    <script src="./app.js"></script>
+</body>
+</html>
