@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark App</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Modal -->
+    <div class="modal-wrapper">
+        <div class="modal">
+            <form action="" onsubmit="addBookmark(event)">
+                <div class="input-group">
+                    <input type="text" placeholder=" " class="input input-title">
+                    <label for="">title</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder=" " class="input input-url">
+                    <label for="">website url</label>
+                </div>
+                <p class="error"></p>
+                <input type="submit" value="submit" class="btn-submit">
+            </form>
+            <button class="close-modal">close</button>
+        </div>
+    </div>
+    <!-- wrapper -->
+    <div class="wrapper">
+      <h1 class="title-app">Bookmark App</h1>
+      <button class="btn-add"><i class="fa fa-plus"></i></button>
+      <div class="bookmarks"></div>
+    </div>
+
+
+    <!-- script -->
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Jost', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EFF5F5;
+}
+input,
+button {
+    font-family: 'Jost', sans-serif;
+}
+
+.wrapper {
+    width: 750px;
+    max-width: 95%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    row-gap: 30px;
+}
+.title-app {
+    color: #497174;
+}
+.btn-add {
+    background: #497174;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+.btn-add .fa-plus {
+    line-height: 60px;
+    transition: .2s ease-in;
+    color: #ECDBBA;
+}
+.btn-add:hover .fa-plus {
+    transform: rotate(45deg);
+}
+.bookmarks {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.bookmark-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 100px;
+    padding: 1rem 0;
+    border-radius: 0 20px 0 20px;
+    text-decoration: none;
+    background: rgba(49, 49, 49, 0.2);
+}
+.bookmark-item img {
+    width: 40px;
+    border-radius: 50%;
+}
+.bookmark-title {
+    color: #497174;
+}
+.bookmark-items-wrapper {
+    position: relative;
+}
+.delete-bookmark {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 50%;
+    top: -6px;
+    right: -5px;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 18px;
+    color: #eee;
+    cursor: pointer;
+}
+.error {
+    color: red;
+    display: none;
+}
+
+/* modal styles */
+.modal-wrapper {
+    position: fixed;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease-in;
+}
+.modal-wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+}
+.modal {
+    width: 520px;
+    max-width: 98%;
+    padding: 2rem;
+    background-color: #EFF5F5;
+    border-radius: 20px;
+}
+.modal form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.input-group {
+    position: relative;
+}
+.input {
+    width: 100%;
+    padding: .4rem .5rem;
+    border: none;
+    outline: none;
+    background-color: #D6E4E5;
+    color: #333;
+    font-size: 1.1rem;
+}
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #777;
+    font-size: 1.02rem;
+    transition: .3s ease-in;
+}
+.input:focus + label,
+.input:not(:placeholder-shown) + label {
+    top: -25%;
+    left: -2px;
+}
+
+.btn-submit {
+    border: none;
+    border-radius: 30px;
+    background-color: #497174;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 8px 0;
+}
+.close-modal {
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: .3rem .6rem;
+    border: none;
+    background-color: #EB6440;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
